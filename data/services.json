@@ -1,0 +1,50 @@
+[
+  {
+    "number": "01",
+    "eyebrow": "Agents",
+    "title": "AI Agents & Assistants",
+    "description": "Assistants that handle real conversations — answering customer questions, qualifying leads, or triaging support tickets — in your tone of voice, trained on your own documentation.",
+    "points": [
+      "Customer support & FAQ assistants",
+      "Lead qualification and intake chat",
+      "Internal knowledge-base assistants for staff",
+      "Voice and WhatsApp-based assistants"
+    ]
+  },
+  {
+    "number": "02",
+    "eyebrow": "Automation",
+    "title": "Workflow Automation",
+    "description": "We connect the tools your team already uses — spreadsheets, CRMs, inboxes, invoicing — so information flows between them automatically, without manual re-entry.",
+    "points": [
+      "Cross-app data sync and triggers",
+      "Automated document generation & approvals",
+      "Scheduled reports and notifications",
+      "Form-to-system intake pipelines"
+    ]
+  },
+  {
+    "number": "03",
+    "eyebrow": "Data",
+    "title": "Data & Insights",
+    "description": "We turn scattered spreadsheets and logs into dashboards that answer real questions — what's slowing down, what's growing, and where to focus next.",
+    "points": [
+      "Custom dashboards and reporting",
+      "Data cleaning & pipeline automation",
+      "Trend and anomaly alerts",
+      "Exportable reports for stakeholders"
+    ]
+  },
+  {
+    "number": "04",
+    "eyebrow": "Integration",
+    "title": "Custom AI Integration",
+    "description": "Already have software you rely on? We build AI features directly into it — search, summarization, drafting, and classification — instead of asking your team to switch tools.",
+    "points": [
+      "AI features added to existing products",
+      "Document summarization & classification",
+      "Smart search over internal content",
+      "API-based AI integrations (Django-ready)"
+    ]
+  }
+]

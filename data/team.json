@@ -1,0 +1,26 @@
+[
+  {
+    "initial": "A",
+    "role": "Founder · AI Systems",
+    "name": "Name Surname",
+    "bio": "Leads project strategy and AI architecture — scopes each build around the client's real workflow."
+  },
+  {
+    "initial": "B",
+    "role": "Automation Engineer",
+    "name": "Name Surname",
+    "bio": "Builds the integrations that connect your existing tools and keep data flowing without manual work."
+  },
+  {
+    "initial": "C",
+    "role": "Frontend & Product",
+    "name": "Name Surname",
+    "bio": "Designs and builds the interfaces clients and their customers actually interact with."
+  },
+  {
+    "initial": "D",
+    "role": "Backend & Data",
+    "name": "Name Surname",
+    "bio": "Builds the Django-powered backend, data pipelines, and reporting behind every system we ship."
+  }
+]

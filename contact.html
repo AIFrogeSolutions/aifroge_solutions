@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — AI Forge Solution</title>
+<meta name="description" content="Tell AI Forge Solution about your project and we'll get back to you.">
+<link rel="icon" href="images/logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpeg" alt="AI Forge Solution logo">
+      <span class="brand-name">AI FORGE <span>SOLUTION</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Start a project</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Tell us what you're trying to <span class="text-grad">automate</span></h1>
+      <p class="lede">Share a few details about your workflow and we'll reply with next steps — no obligation, no sales script.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container grid-2" style="align-items:start;">
+
+      <div class="card">
+        <h2 style="margin-bottom:24px;">Send us a message</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="field full">
+              <label for="service">What are you looking for?</label>
+              <select id="service" name="service">
+                <option value="agents">AI Agents &amp; Assistants</option>
+                <option value="automation">Workflow Automation</option>
+                <option value="data">Data &amp; Insights</option>
+                <option value="integration">Custom AI Integration</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">Tell us about your workflow</label>
+              <textarea id="message" name="message" required placeholder="What's taking up time right now that shouldn't need a human?"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-lg">Send message</button>
+          <p class="form-status form-note" role="status" aria-live="polite"></p>
+          <p class="form-note">Submitting opens your email client with these details pre-filled, addressed to us.</p>
+        </form>
+      </div>
+
+      <div class="card contact-info-card">
+        <h2>Other ways to reach us</h2>
+
+        <div class="contact-line">
+          <div class="icon-mark">@</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:aifrogesolution@gmail.com">aifrogesolution@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="icon-mark">☎</div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+923107708080">+92 310 7708080</a></p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="icon-mark">◎</div>
+          <div>
+            <h4>Location</h4>
+            <p>Remote-first — working with clients wherever they are.</p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="icon-mark">⏱</div>
+          <div>
+            <h4>Response time</h4>
+            <p>We reply to every enquiry within one business day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.jpeg" alt="AI Forge Solution logo">
+        <p>Innovate. Automate. Elevate. We build AI systems that give your team its time back.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:aifrogesolution@gmail.com">aifrogesolution@gmail.com</a>
+        <a href="tel:+923107708080">+92 310 7708080</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AI Forge Solution. All rights reserved.</span>
+      <span>Static site — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

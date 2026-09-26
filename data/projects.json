@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Lead Capture & Email Notification Automation",
+    "problem": "Web-form leads that only land in an inbox or a spreadsheet get missed or followed up late, and there's no consistent record of who submitted what, when.",
+    "solution": "An n8n workflow that captures every form submission, standardizes the fields, logs the lead to Google Sheets, and sends an instant email notification with the full details — so nothing sits unseen.",
+    "tech": ["n8n", "Google Sheets API", "Gmail API"],
+    "features": [
+      "Hosted web form collecting name, email, phone, service needed, and message",
+      "Automatic cleanup into consistent field names, with a default status and timestamp on every submission",
+      "Every lead logged to Google Sheets for simple tracking",
+      "Instant email notification with the full lead details the moment a form is submitted"
+    ],
+    "image": "images/projects/lead-capture-workflow.png"
+  },
+  {
+    "title": "AgenticDataHub",
+    "problem": "Datasets relevant to a research topic are usually scattered across many pages with no single API, so finding and collecting them means manually crawling sites and writing one-off scraping code per page.",
+    "solution": "A LangGraph multi-agent pipeline that crawls a seed URL, has an LLM agent judge which links are likely datasets, then routes each one to a verified download or an LLM-written extraction script — retrying failures and reusing successful parsers via a small RAG memory — before writing a Markdown summary of everything collected.",
+    "tech": ["Python", "LangGraph", "LangChain", "vLLM (OpenAI-compatible)", "Playwright", "BeautifulSoup", "sentence-transformers"],
+    "features": [
+      "Multi-agent pipeline — scraper, dataset discovery, orchestrator, downloader, parser, and summary nodes sharing one typed state",
+      "LLM agent scores each discovered link for relevance and decides download vs. parse",
+      "Self-writing parser that generates and runs extraction code, retrying against real errors",
+      "RAG memory that stores successful parsers and reuses them on similar pages",
+      "Feedback/retry loop after every stage of the pipeline",
+      "Outputs a Markdown report with schemas, sample rows, and data-quality notes"
+    ],
+    "image": "images/projects/agentic-data-hub.jpg",
+    "github": "https://github.com/talha142/AgenticDataHub"
+  },
+  {
+    "title": "Medical RAG Chatbot",
+    "problem": "General-purpose chatbots can answer health questions fluently but ungrounded, with no way to check where an answer came from — a real risk in a health context.",
+    "solution": "A local Retrieval-Augmented Generation chatbot that answers only from ingested MedlinePlus content and cites the exact source pages under every answer, running entirely on local models so there's no paid API and no data leaving the machine.",
+    "tech": ["Python", "LangChain", "ChromaDB", "sentence-transformers", "Ollama", "Streamlit"],
+    "image": "images/projects/medical-rag-chatbot.jpg",
+    "note": "Educational project, not a medical device — the app shows a standing disclaimer and reminds users to consult a healthcare professional.",
+    "github": "https://github.com/talha142/RAG"
+  },
+  {
+    "title": "Human Flow Analytics",
+    "problem": "Understanding foot traffic from video — how many distinct people passed through a space over time — usually means watching footage manually, with no simple way to get a count per time window.",
+    "solution": "A Streamlit app that runs YOLOv8 detection and tracking on an uploaded video, counts unique tracked individuals per minute, and returns an annotated video plus a downloadable chart and CSV.",
+    "tech": ["Python", "YOLOv8 (Ultralytics)", "OpenCV", "pandas", "Streamlit"],
+    "features": [
+      "Upload mp4/avi/mov and get back an annotated video with a numbered box on every tracked person",
+      "Per-minute unique-person counts shown as a line or bar chart",
+      "CSV export of unique counts per minute",
+      "Progress bar and total processing time shown during the run"
+    ],
+    "note": "\"Unique\" counts unique tracker IDs — if the tracker loses someone (occlusion, leaving and re-entering frame) they can be counted again. A known, documented limitation rather than a validated people-counting accuracy figure.",
+    "image": "images/projects/human-flow-analytics.jpg",
+    "github": "https://github.com/talha142/human-flow-analytics"
+  },
+  {
+    "title": "Appointment AI",
+    "problem": "Small service businesses lose real time to scheduling — customers message or call to book, check, cancel, or reschedule, and staff manually check availability and update records for every request.",
+    "solution": "A conversational AI agent that handles the entire appointment lifecycle through chat — checking live services and availability, then booking, checking, cancelling, and rescheduling appointments directly in Google Sheets, with automatic email confirmations.",
+    "tech": ["n8n", "LangChain", "Google Gemini", "Google Sheets API", "Gmail API"],
+    "features": [
+      "Natural-language chat agent with conversation memory, not a fixed-menu bot",
+      "Checks the live service catalog and weekly availability before booking anything",
+      "Books, checks, cancels, and reschedules appointments as agent tool calls against Google Sheets",
+      "Tracks customers and their appointment history automatically",
+      "Sends email confirmations via Gmail"
+    ],
+    "image": "images/projects/appointment-ai-sheets.jpg"
+  },
+  {
+    "title": "AI Voice Agent — Vapi Tools",
+    "problem": "Phone-based bookings need a human available to answer every call, check slot availability, and log the result — expensive to staff and inconsistent to track.",
+    "solution": "A webhook backend that plugs into Vapi's voice AI as callable tools, checking slot availability and booking, cancelling, or rescheduling appointments in Google Sheets in real time during a live call, then logging the outcome once the call ends.",
+    "tech": ["n8n", "Vapi", "Google Sheets API", "Webhooks"],
+    "features": [
+      "Webhook endpoint that routes each Vapi tool call (check slot, book, cancel, reschedule) to the matching Google Sheets action",
+      "Real-time slot-availability check before a booking is confirmed",
+      "Looks up the existing booking first when handling a cancel or reschedule request",
+      "Structured responses returned to Vapi so the voice agent can speak the result back to the caller",
+      "A separate call-ended webhook logs every completed call for review"
+    ],
+    "image": "images/projects/voice-agent-calls.jpg"
+  }
+]
