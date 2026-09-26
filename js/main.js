@@ -146,26 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch(function (err) { console.error(err); });
   }
 
-  // Team grid (team.html) — reads data/team.json
-  var teamGrid = document.querySelector("#team-grid");
-  if (teamGrid) {
-    loadJSON("data/team.json")
-      .then(function (team) {
-        teamGrid.innerHTML = team.map(function (m) {
-          return (
-            '<div class="card team-card">' +
-              '<div class="team-photo">' + esc(m.initial) + "</div>" +
-              '<span class="team-role">' + esc(m.role) + "</span>" +
-              "<h3>" + esc(m.name) + "</h3>" +
-              "<p>" + esc(m.bio) + "</p>" +
-            "</div>"
-          );
-        }).join("");
-        initReveal(teamGrid);
-      })
-      .catch(function (err) { console.error(err); });
-  }
-
   // Service detail blocks (services.html) — reads data/services.json
   var servicesList = document.querySelector("#services-list");
   if (servicesList) {
